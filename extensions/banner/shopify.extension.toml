@@ -1,0 +1,150 @@
+# Learn more about configuring your checkout UI extension:
+# https://shopify.dev/api/checkout-extensions/checkout/configuration
+
+# The version of APIs your extension will receive. Learn more:
+# https://shopify.dev/docs/api/usage/versioning
+api_version = "2024-04"
+
+[[extensions]]
+name = "banner"
+handle = "banner"
+type = "ui_extension"
+
+
+# Controls where in Shopify your extension will be injected,
+# and the file that contains your extension’s source code. Learn more:
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/extension-targets-overview
+
+[[extensions.targeting]]
+module = "./src/Checkout.tsx"
+target = "purchase.checkout.block.render"
+
+[extensions.capabilities]
+# Gives your extension access to directly query Shopify’s storefront API.
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/configuration#api-access
+api_access = true
+
+# Gives your extension access to make external network calls, using the
+# JavaScript `fetch()` API. Learn more:
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/configuration#network-access
+# network_access = true
+
+# Loads metafields on checkout resources, including the cart,
+# products, customers, and more. Learn more:
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/configuration#metafields
+
+# [[extensions.metafields]]
+# namespace = "my_namespace"
+# key = "my_key"
+# [[extensions.metafields]]
+# namespace = "my_namespace"
+# key = "my_other_key"
+
+# Defines settings that will be collected from merchants installing
+# your extension. Learn more:
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/configuration#settings-definition
+
+[extensions.settings]
+[[extensions.settings.fields]]
+key = "message"
+type = "single_line_text_field"
+name = "Message"
+description = "Enter a message for the banner"
+
+[[extensions.settings.fields]]
+key = "textSize"
+type = "single_line_text_field"
+name = "Text size"
+description = "Enter a message text size for the banner"
+
+[[extensions.settings.fields.validations]]
+name = "choices"
+value = '["extraSmall", "small", "base", "medium", "large", "extraLarge"]'
+
+[[extensions.settings.fields]]
+key = "textStyle"
+type = "single_line_text_field"
+name = "Text style"
+description = "Choose a style for the banner text"
+
+[[extensions.settings.fields.validations]]
+name = "choices"
+value = '["info", "accent", "success", "warning", "subdued", "critical", "decorative"]'
+
+[[extensions.settings.fields]]
+key = "borderStyle"
+type = "single_line_text_field"
+name = "Border style"
+description = "Choose a border style for the banner"
+
+[[extensions.settings.fields.validations]]
+name = "choices"
+value = '["none", "base", "dashed", "dotted"]'
+
+[[extensions.settings.fields]]
+key = "borderRadius"
+type = "single_line_text_field"
+name = "Border radius"
+description = "Choose a border radius for the banner"
+
+[[extensions.settings.fields.validations]]
+name = "choices"
+value = '["none", "small", "base", "large", "fullyRounded"]'
+
+[[extensions.settings.fields]]
+key = "mobileBackgroundImage"
+type = "single_line_text_field"
+name = "Background image"
+description = "Select a background image"
+
+[[extensions.settings.fields]]
+key = "tabletBackgroundImage"
+type = "single_line_text_field"
+name = "Background image (tablet variant)"
+description = "Select a table variant for the background image"
+
+[[extensions.settings.fields]]
+key = "desktopBackgroundImage"
+type = "single_line_text_field"
+name = "Background image (desktop variant)"
+description = "Select a desktop variant for the background image"
+
+[[extensions.settings.fields]]
+key = "backgroundImageFit"
+type = "single_line_text_field"
+name = "Background image style"
+description = "Choose how the background image should behave (defaults to fit)."
+
+[[extensions.settings.fields.validations]]
+name = "choices"
+value = '["contain", "cover"]'
+
+[[extensions.settings.fields]]
+key = "width"
+type = "number_integer"
+name = "Width"
+description = "The banner width"
+
+[[extensions.settings.fields]]
+key = "height"
+type = "number_integer"
+name = "Height"
+description = "The banner height"
+
+[[extensions.settings.fields]]
+key = "to"
+type = "single_line_text_field"
+name = "Banner redirect url"
+description = "The URL to the user will be redirected after interacting with the banner"
+
+[[extensions.settings.fields]]
+key = "startDate"
+type = "date_time"
+name = "Initial display date"
+description = "Enter an initial date to display the banner (optional)"
+
+[[extensions.settings.fields]]
+key = "endDate"
+type = "date_time"
+name = "Final display date"
+description = "Enter an end date to display the banner (optional)"

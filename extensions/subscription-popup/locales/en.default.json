@@ -1,0 +1,12 @@
+{
+  "subscription_already_exists": "A Subscription Already Exists",
+  "subscription_canceled_exists_error": "You have chosen to purchase a subscription plan, however a previously canceled subscription already exists for you account. You may reactivate your subscription by contacting Viome support. To purchase a test kit, ",
+  "subscription_already_exists_error": "You have chosen to purchase a subscription plan, however a subscription already exists for your account. If you would like to change your current subscription, you can contact Viome Support to do so. To purchase a test kit, ",
+  "select_a_kit": "select a kit here",
+  "subscription_product_removed": ". The subscription product has been removed from your cart.",
+  "return_to_cart": "Return to Cart",
+  "contact_support": "Contact Support",
+  "reason_request_in_progress": "A request is in progress, please wait until it is finished before proceeding with the checkout.",
+  "reason_active_subscription": "A subscription already exists for your account",
+  "reason_canceled_subscription": "A previously cancelled subscription already exists for your account. You may reactivate your subscription by contacting the Viome Support."
+}

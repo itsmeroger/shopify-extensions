@@ -1,0 +1,28 @@
+api_version = "2024-04"
+
+[[extensions]]
+handle = "cart-checkout-validation"
+name = "t:name"
+description = "t:description"
+type = "function"
+
+# [[extensions.targeting]]
+# An extensibility identifier.
+# target = "purchase.validation.fetch"
+# The local GraphQL file used for code generation.
+# input_query = "src/fetch.graphql"
+# The generated WASM export name for the given target.
+# export = "fetch"
+
+[[extensions.targeting]]
+target = "purchase.validation.run"
+input_query = "src/run.graphql"
+export = "run"
+
+[extensions.build]
+command = ""
+path = "dist/function.wasm"
+
+[extensions.ui.paths]
+create = "/"
+details = "/"

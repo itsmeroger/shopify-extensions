@@ -1,0 +1,35 @@
+{
+  "name": "shopify-extensions",
+  "version": "1.0.0",
+  "author": "itsmeroger",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "shopify": "shopify",
+    "build": "shopify app build",
+    "dev": "shopify app dev",
+    "info": "shopify app info",
+    "generate": "shopify app generate",
+    "deploy": "shopify app deploy",
+    "playwright:ui": "npx playwright test --ui",
+    "update:checkout-layout": "npx ts-node ./scripts/update-checkout-layout.ts"
+  },
+  "dependencies": {
+    "@shopify/admin-api-client": "^0.2.9",
+    "@shopify/app": "^3.58.2",
+    "@shopify/storefront-api-client": "^1.0.0",
+    "lodash.debounce": "^4.0.8",
+    "vitest": "^1.6.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@playwright/test": "^1.44.1",
+    "@shopify/cli": "^3.61.0",
+    "@types/node": "^20.12.12",
+    "dotenv": "^16.4.5"
+  },
+  "trustedDependencies": [
+    "@shopify/plugin-cloudflare"
+  ]
+}

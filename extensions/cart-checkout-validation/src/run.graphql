@@ -1,0 +1,15 @@
+query RunInput {
+  cart {
+    lines {
+      quantity
+
+      merchandise: sellingPlanAllocation {
+        sellingPlan {
+          id
+          name
+          recurringDeliveries
+        }
+      }
+    }
+  }
+}

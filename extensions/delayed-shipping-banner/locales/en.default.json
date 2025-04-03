@@ -1,0 +1,6 @@
+{
+  "separator": ", ",
+  "connector": " and ",
+  "delayed_product": "Due to high demand, the {{products}} product will be shipped within {{minDelayDays}} to {{maxDelayDays}} business days",
+  "delayed_products": "Due to high demand, our {{products}} products will be shipped within {{minDelayDays}} to {{maxDelayDays}} business days"
+}
